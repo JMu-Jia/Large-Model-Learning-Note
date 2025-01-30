@@ -1,7 +1,11 @@
 project-name/
+
 │
+
 ├── dir1/
+
 │   ├── file1.ext
+
 │   └── file2.ext
 
 ---
