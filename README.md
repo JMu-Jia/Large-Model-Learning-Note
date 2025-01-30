@@ -7,6 +7,8 @@ https://blog.csdn.net/xiaoh_7/article/details/140019530 （逐层手撕）
 https://cloud.tencent.com/developer/article/1890943 （从零搭建）
 - Transformer 完全基于**注意力机制**，没有递归或卷积结构，所以不具备处理序列信息的能力，其通过位置编码处理序列。
 
+---
+
 ### LLaMa
 
 ### WebGPT
