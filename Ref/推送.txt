@@ -1,0 +1,4 @@
+git add .
+git commit -m '推送'
+git push origin main  # 上行文件
+git pull --rebase origin master  #下行文件
