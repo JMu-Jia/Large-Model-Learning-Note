@@ -1,8 +1,6 @@
 # Large Model Learning Note
-
-## 手撕大模型
-
 ---
+## 手撕大模型
 
 ### Transformer
 
