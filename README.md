@@ -12,7 +12,7 @@ Large-Model-Learning-Note/
 ├── Note/           */学习笔记
 │   └── MyNote.md   */笔记
 ├── Ref/           
-│   └── 推送.md      */推送代码
+│   └── UpLoad.md   */推送代码
 ├── SeCode/         */服务器运行的程序
 │   ├── 
 │   └── 
