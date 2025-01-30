@@ -28,7 +28,10 @@ Server environments (with GPU):
 
 - Python (待更新)
 
-## Acknowledgement
+## Acknowledgements
+### Transformer
+- https://blog.csdn.net/xiaoh_7/article/details/140019530 
+- https://cloud.tencent.com/developer/article/1890943 
 
 
 ## News
