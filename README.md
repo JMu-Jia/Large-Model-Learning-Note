@@ -1,9 +1,8 @@
 # Large Model Learning Note
----
+
 ## 手撕大模型
 
 ### Transformer
-
 https://blog.csdn.net/xiaoh_7/article/details/140019530 （逐层手撕）
 https://cloud.tencent.com/developer/article/1890943 （从零搭建）
 
