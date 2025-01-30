@@ -34,8 +34,6 @@ https://zhuanlan.zhihu.com/p/14953285242（论文解析）
 
 ## 微调技术 PEFT
 
----
-
 ### LoRA
 
 ---
@@ -69,7 +67,6 @@ https://zhuanlan.zhihu.com/p/14953285242（论文解析）
 
 ## 大模型工具
 
----
 
 ### DevOps工具
 
