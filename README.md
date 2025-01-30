@@ -22,7 +22,7 @@ Large-Model-Learning-Note/
 
 Laptop environments (without GPU):
 
-- Python-3.9.5 + torch-2.6.0 + torchaudio-2.6.0 torchvision-0.21.0
+- Python-3.9.5 + torch-2.6.0 + torchaudio-2.6.0 + torchvision-0.21.0
 
 Server environments (with GPU):
 
@@ -32,4 +32,4 @@ Server environments (with GPU):
 
 
 ## News
-:triangular_flag_on_post:**News**(2025.1) 创建笔记
+:triangular_flag_on_post:**News**(2025.1): 创建笔记
