@@ -39,4 +39,5 @@ Server environments (with GPU):
 
 ## News
 :triangular_flag_on_post:**News**(2025.1): 创建笔记
+
 :triangular_flag_on_post:**News**(2025.2): 添加Transformer
