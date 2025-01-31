@@ -7,7 +7,7 @@
 Large-Model-Learning-Note/
 │
 ├── LapCode/        */笔记本运行的程序
-│   ├── 
+│   ├── Transformer */手撕Transformer
 │   └── 
 ├── Note/           */学习笔记
 │   └── MyNote.md   */笔记
@@ -29,10 +29,14 @@ Server environments (with GPU):
 - Python (待更新)
 
 ## Acknowledgements
+
+### Book 
+- https://github.com/ZJU-LLMs/Foundations-of-LLMs
 ### Transformer
 - https://blog.csdn.net/xiaoh_7/article/details/140019530 
-- https://cloud.tencent.com/developer/article/1890943 
+
 
 
 ## News
 :triangular_flag_on_post:**News**(2025.1): 创建笔记
+:triangular_flag_on_post:**News**(2025.2): 添加Transformer
