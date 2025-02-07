@@ -2,7 +2,7 @@
 
 ## 手撕大模型
 
-###Transformer
+### Transformer
 
 - Transformer 完全基于**注意力机制**，没有递归或卷积结构，所以不具备处理序列信息的能力，其通过**位置编码**处理序列。
 - Transformer 是由两种模块组合构建的模块化网络结构。两种模块分别为：（1）**注意力**（Attention）模块；（2）**全连接前馈**（Fully-Connected Feedforward）模块。其中，
@@ -22,9 +22,6 @@ layer 的输出。Decoder 交叉注意力模块的输入分别是自注意力模
 ---
 
 ### GPT
-LangeChain+AutoGPT
-https://gitcode.com/open-source-toolkit/4b8b1
-
 - GPT系列结构差异![](Fig/GPT系列结构差异.png)
 - GPT于Transformer相比，只使用Decoder部分，并进行LayerNorm前置（GPT-2/3）。
 
