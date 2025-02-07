@@ -9,7 +9,7 @@
 自注意力模块由自注意力层（Self-AttentionLayer）、残差连接（ResidualConnections）和层正则化（LayerNormalization）组成。全连接前馈模块由全连接前馈层（占总参数2/3），残差连接和层正则化组成。
 ![](Fig/Transformer模块结构.png)
 - Feedforward 用于增强模型非线性能力 LayerNormalization 用以加速神经网络训练过程并取得更好的泛化性能。
-- Transformer 结构示意图（以 Encoder 和 Decoder 为主）。![](Fig/Transformer结构示意图.jpg)原始的 Transformer 采用 Encoder-Decoder 架构，
+- Transformer 结构示意图（以 Encoder 和 Decoder 为主）。![](Fig/Transformer结构示意图.JPG)原始的 Transformer 采用 Encoder-Decoder 架构，
 其包含 Encoder 和 Decoder 两部分。这两部分都是由自注意力模块和全连接前馈模块重复连接构建而成。
 其中，**Encoder 部分由六个级联的 encoder layer 组成，每个 encoder layer 包含一个注意力模块和一个全连接前馈模块**。
 其中的注意力模块为自注意力模块（query，key，value 的输入是相同的）。** Decoder 部分由六个级联的
@@ -17,7 +17,7 @@ decoder layer 组成，每个 decoder layer 包含两个注意力模块和一个
 其中，**第一个注意力模块为自注意力模块，第二个注意力模块为交叉注意力模块**
 （query，key，value 的输入不同）。Decoder 中第一个 decoder layer 的自注意力模块的输入模型的输出。其后的decoder layer的自注意力模块的输入为上一个 decoder
 layer 的输出。Decoder 交叉注意力模块的输入分别是自注意力模块的输出（query）和最后一个 encoder layer 的输出（key，value）。
-- [Code](../Code/Transformer.py)中 class 调用结构示意图。![](Fig/Transformer代码class层级.jpg)
+- [Code](../Code/Transformer.py)中 class 调用结构示意图。![](Fig/Transformer代码class层级.JPG)
 - **优缺点：** 相较于 RNN 模型串行的循环迭代模式，Transformer 并行输入的特性，使其容易进行并行计算。但是，Transformer 并行输入的范式也导致网络模型的规模随输入序列长度的增长而平方次增长。这为应用 Transformer 处理长序列带来挑战。
 ---
 
