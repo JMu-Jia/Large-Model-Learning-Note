@@ -17,7 +17,7 @@ decoder layer 组成，每个 decoder layer 包含两个注意力模块和一个
 其中，**第一个注意力模块为自注意力模块，第二个注意力模块为交叉注意力模块**
 （query，key，value 的输入不同）。Decoder 中第一个 decoder layer 的自注意力模块的输入模型的输出。其后的decoder layer的自注意力模块的输入为上一个 decoder
 layer 的输出。Decoder 交叉注意力模块的输入分别是自注意力模块的输出（query）和最后一个 encoder layer 的输出（key，value）。
-- [Code](../Code/Transformer.py)中 class 调用结构示意图。![](Fig/Transformer代码class层级.JPG)
+- [Code](../LapCode/Transformer/)中 class 调用结构示意图。![](Fig/Transformer代码class层级.JPG)
 - **优缺点：** 相较于 RNN 模型串行的循环迭代模式，Transformer 并行输入的特性，使其容易进行并行计算。但是，Transformer 并行输入的范式也导致网络模型的规模随输入序列长度的增长而平方次增长。这为应用 Transformer 处理长序列带来挑战。
 ---
 
@@ -25,7 +25,7 @@ layer 的输出。Decoder 交叉注意力模块的输入分别是自注意力模
 - GPT系列结构差异![](Fig/GPT系列结构差异.png)
 - GPT于Transformer相比，只使用Decoder部分，并进行LayerNorm前置（GPT-2/3）。
 - 从GPT-2开始使用BPE（Byte Pair Encoding）分词器。BPE每一步都将最常见的一对相邻数据单位替换为该数据中没有出现过的一个新单位，反复迭代直到满足停止条件。
-- MiniGPT的实现 [Code](../Code/MiniGPT/)
+- MiniGPT的实现 [Code](../LapCode/MiniGPT/)
 
 #### GPT-1
 - GPT-1：使用Transformer中的Decoder部分，省略Encoder部分和交叉注意力模块。
@@ -58,7 +58,7 @@ layer 的输出。Decoder 交叉注意力模块的输入分别是自注意力模
 
 - LLaMA与GPT的**主要区别**在于：GPT系列的升级主线聚焦于模型规模与预训练语料的同步提升，而LLaMA则在模型规模上保持相对稳定，**更关注于提升预训练数据的规模**。
 - 实践“**小模型+大数据理念**”，旨在以大规模的优质数据训练相对较小的模型。证明了数据的力量。
-- LLaMA3的实现 [Code](../Code/LLaMA/)，模型结构![](Fig/LLaMA模型结构.png)
+- LLaMA3的实现 [Code](../LapCode/LLaMA/)，模型结构![](Fig/LLaMA模型结构.png)
 
 #### LLaMA1 
 - 在模型架构方面，LLaMA1采用与GPT系列同样的网络架构，但在Transformer原始词嵌入模块、注意力模块和全连接前馈模块上进行了优化。![](Fig/LLaMA解码块架构与标准Transformer解码器架构对比.JPG)
