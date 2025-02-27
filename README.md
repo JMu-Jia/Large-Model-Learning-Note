@@ -9,6 +9,7 @@ Large-Model-Learning-Note/
 ├── LapCode/                */笔记本运行的程序
 │   ├── Transformer/        */手撕Transformer
 │   ├── MiniGPT/            */GPT的简单实现
+│   ├── LLaMa/              */LLaMA3的从零实现
 │   └── LangChain+AutoGPT/  */LangChain实现AutoGPT（后续更新）
 ├── Note/                   */学习笔记
 │   └── MyNote.md           */笔记
@@ -38,7 +39,8 @@ Server environments (with GPU):
 ### MiniGPT
 - https://github.com/karpathy/minGPT?tab=readme-ov-file
 - https://blog.csdn.net/wxc971231/article/details/132000182
-
+### LLaMa
+- https://github.com/wdndev/llama3-from-scratch-zh?tab=readme-ov-file
 
 ## News
 :triangular_flag_on_post:**News**(2025.1): 创建笔记

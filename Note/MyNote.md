@@ -24,6 +24,8 @@ layer 的输出。Decoder 交叉注意力模块的输入分别是自注意力模
 ### GPT
 - GPT系列结构差异![](Fig/GPT系列结构差异.png)
 - GPT于Transformer相比，只使用Decoder部分，并进行LayerNorm前置（GPT-2/3）。
+- 从GPT-2开始使用BPE（Byte Pair Encoding）分词器。BPE每一步都将最常见的一对相邻数据单位替换为该数据中没有出现过的一个新单位，反复迭代直到满足停止条件。
+- MiniGPT的实现 [Code](../Code/MiniGPT/)
 
 #### GPT-1
 - GPT-1：使用Transformer中的Decoder部分，省略Encoder部分和交叉注意力模块。
@@ -52,7 +54,23 @@ layer 的输出。Decoder 交叉注意力模块的输入分别是自注意力模
 
 ---
 
-### LLaMa
+### LLaMA
+
+- LLaMA与GPT的**主要区别**在于：GPT系列的升级主线聚焦于模型规模与预训练语料的同步提升，而LLaMA则在模型规模上保持相对稳定，**更关注于提升预训练数据的规模**。
+- 实践“**小模型+大数据理念**”，旨在以大规模的优质数据训练相对较小的模型。证明了数据的力量。
+- LLaMA3的实现 [Code](../Code/LLaMA/)，模型结构![](Fig/LLaMA模型结构.png)
+
+#### LLaMA1 
+- 在模型架构方面，LLaMA1采用与GPT系列同样的网络架构，但在Transformer原始词嵌入模块、注意力模块和全连接前馈模块上进行了优化。![](Fig/LLaMA解码块架构与标准Transformer解码器架构对比.JPG)
+词嵌入模块：绝对位置编码(Transformer)-->旋转位置编码（Rotary Positional Embeddings, RoPE）(GPTNeo)；注意力模块：ReLU(Transformer)-->SwiGLU(PaLM)；
+自注意力操作前对Q和K添加旋转位置编码；全连接前馈模块：Pre-Norm正则化策略(GPT-3)。
+#### LLaMA2
+- LLaMA2继承LLaMA1架构。
+- 预训练阶段采用**人类反馈强化学习**。首先使用大规模且公开的指令微调数据集对模型进行有监督微调。然后**训练RLHF奖励模型**，并基于**近端策略优化**（Proximal Policy Optimization, PPO）和**拒绝采样**（Rejection Sampling）进行强化学习对模型进行更新。
+- 部分LLaMA2（34B和70B）增加**分组查询注意力**（Grouped Query Attention, GQA），以提升计算效率。该机制下，K和V不再与Q一一对应，而是一组Q共享相同的K和V，从而降低内存占用并减少模型总参数量。
+#### LLaMA3
+- 模型架构几乎与LLaMA2完全相同，只是在分词（tokenizer）阶段，将**字典长度扩大了三倍**。同样采用与LLaMA2一样的人类反馈强化学习。
+- 字典扩大的好处：一方面减少中文字符等语言元素被拆分为多个Token的情况，有效降低了总体Token数量，从而提高了模型处理语言的连贯性和准确性。另一方面，扩大的字典有助于减少对具有完整意义的语义单元进行分割，使模型在处理文本时可以更准确的捕捉词义和上下文，提高生成文本的流畅性和连贯性。
 
 ---
 
